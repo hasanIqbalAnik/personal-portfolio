@@ -5,7 +5,7 @@
 */
 
 window._skel_config = {
-	prefix: 'assets/style',
+	prefix: 'assets/css/style',
 	pollOnce: true,
 	resetCSS: true,
 	useOrientation: false,
