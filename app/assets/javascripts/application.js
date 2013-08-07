@@ -14,4 +14,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require js/config
+//= require js/html5shiv.js
+//= require js/skel
+
+
 
