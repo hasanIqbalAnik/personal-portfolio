@@ -9,6 +9,9 @@
   <script src="assets/jquery.min.js"></script>
   <script src="assets/config.js"></script>
   <script src="assets/skel.min.js"></script>
+  <script src="assets/form_validation.js"></script>
+  <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.js"></script>
+  <script src="http://malsup.github.com/jquery.form.js"></script>
   <noscript>
     <link rel="stylesheet" href="assets/css/skel-noscript.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
@@ -119,27 +122,27 @@
       <header>
         <h2>Email Me</h2>
       </header>
-      <form action="contact" method="post" name="message">
+      <form action="contact" method="post" name="message" id="contact">
         <div>
           <div class="row half">
             <div class="6u">
-              <input type="text" class="text" name="name" placeholder="Name" />
+              <input type="text" class="required text" name="name" placeholder="Name" />
             </div>
             <div class="6u">
-              <input type="text" class="text" name="email" placeholder="Email" />
+              <input type="text" class="required text" name="email" placeholder="Email" />
             </div>
           </div>
           <div class="row half">
             <div class="12u">
-              <input type="text" class="text" name="subject" placeholder="Subject" />
+              <input type="text" class="required text" name="subject" placeholder="Subject" />
             </div>
           </div>
           <div class="row half">
             <div class="12u">
-              <textarea name="body" placeholder="Message"></textarea>
+              <textarea name="body" class="required" placeholder="Message"></textarea>
             </div>
           </div>
-          <div class="row">
+          <div class="row" id="submit">
             <div class="12u">
               <input type="submit" class="button" value="Send Message" />
             </div>
