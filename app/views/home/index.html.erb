@@ -12,11 +12,14 @@
   <script src="assets/form_validation.js"></script>
   <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.js"></script>
   <script src="http://malsup.github.com/jquery.form.js"></script>
+  <script src="assets/jquery.validationEngine-en.js" type="text/javascript" charset="utf-8"></script>
+  <script src="assets/jquery.validationEngine.js" type="text/javascript" charset="utf-8"></script>
   <noscript>
     <link rel="stylesheet" href="assets/css/skel-noscript.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/style-desktop.css" />
     <link rel="stylesheet" href="assets/css/noscript.css" />
+    <link rel="stylesheet" href="assets/css/validationEngine.jquery.css" type="text/css"/>
   </noscript>
   <!--[if lte IE 8]><script src="assets/html5shiv.js"></script><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
 </head>
@@ -126,20 +129,20 @@
         <div>
           <div class="row half">
             <div class="6u">
-              <input type="text" class="required text" name="name" placeholder="Name" />
+              <input type="text" class="text validate[required]" name="name" placeholder="Name" />
             </div>
             <div class="6u">
-              <input type="text" class="required text" name="email" placeholder="Email" />
+              <input type="text" class="text validate[required, custom[email]]" name="email" placeholder="Email" data-prompt-position="topLeft:90"/>
             </div>
           </div>
           <div class="row half">
             <div class="12u">
-              <input type="text" class="required text" name="subject" placeholder="Subject" />
+              <input type="text" class="text validate[required]" name="subject" placeholder="Subject" data-prompt-position="topLeft:90"/>
             </div>
           </div>
           <div class="row half">
             <div class="12u">
-              <textarea name="body" class="required" placeholder="Message"></textarea>
+              <textarea name="body" class="validate[required]" placeholder="Message" data-prompt-position="topLeft:90"></textarea>
             </div>
           </div>
           <div class="row" id="submit">
